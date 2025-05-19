@@ -1,1 +1,117 @@
 <!-- roei hamihas id-323919829 ---------- tal braunstein  id-207118365 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reddit Layout</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <header class="reddit-header">
+    <div class="reddit-logo">
+      <i class="bi bi-reddit reddit-icon"></i>
+      reddit
+    </div>
+
+    <div class="search-bar centered">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" placeholder="Search Reddit">
+    </div>
+
+    <div class="header-icons">
+      <i class="bi bi-plus-lg"></i>
+      <i class="bi bi-bullseye"></i>
+      <i class="bi bi-chat-dots"></i>
+      <i class="fas fa-bell"></i>
+      <i class="fas fa-envelope"></i>
+      <i class="fas fa-user-circle"></i>
+    </div>
+  </header>
+
+  <aside class="sidebar">
+    <ul class="sidebar-menu">
+      <!-- ... לא השתנה ... -->
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <div class="sort-bar">
+      <button class="sort-button">Best <i class="fas fa-chevron-down"></i></button>
+      <button class="sort-button"><i class="fas fa-th"></i></button>
+    </div>
+
+    <!-- התחלת פוסט חדש -->
+    <div class="post-container"> <!-- נוספה -->
+      <div class="post">
+        <i class="bi bi-person-circle"></i>
+        <h6 class="post-meta">r/CatsBeingAdorable • 9 hr. ago</h6>
+        <h5 class="post-title">i want a name for my new cat 🐱</h5>
+        <img class="post-image" src="https://res.cloudinary.com/globes/image/upload/t_desktop_article_content_header_800%2A392/v1660236836/direct/shutterstock_1563541219_lw0wnv.jpg" alt="Cat Picture">
+        <div class="post-actions">
+          <button class="like-btn post-like"><i class="fas fa-arrow-up"></i> <span class="like-count">62</span></button>
+          <button class="post-action-btn"><i class="fas fa-comment"></i> <span class="comment-counter">3</span></button> <!-- שונתה -->
+          <button class="post-action-btn"><i class="fas fa-share"></i> Share</button>
+        </div>
+      </div>
+
+      <button class="toggle-comments-btn">הצג תגובות</button> <!-- נוספה -->
+
+      <div class="comments"> <!-- נוספה -->
+        <!-- 3 תגובות אמיתיות נוספו -->
+        <div class="comment">
+          <strong>roei_ha_theking</strong>: this is fucking garfild?????????????
+          <div class="comment-actions">
+            <button class="like-btn comment-like"><i class="fas fa-arrow-up"></i> <span class="like-count">0</span></button>
+            <button class="unlike-btn"><i class="fas fa-arrow-down"></i></button>
+            <button class="reply-btn"><i class="fas fa-reply"></i> Reply</button>
+          </div>
+        </div>
+
+        <div class="comment">
+          <strong>brauni__</strong>: this cat make me smile!!
+          <div class="comment-actions">
+            <button class="like-btn comment-like"><i class="fas fa-arrow-up"></i> <span class="like-count">0</span></button>
+            <button class="unlike-btn"><i class="fas fa-arrow-down"></i></button>
+            <button class="reply-btn"><i class="fas fa-reply"></i> Reply</button>
+          </div>
+        </div>
+
+        <div class="comment">
+          <strong>catdad_approved</strong>: When your cat sees you eating and acts like he's been starving since 1342.
+          <div class="comment-actions">
+            <button class="like-btn comment-like"><i class="fas fa-arrow-up"></i> <span class="like-count">0</span></button>
+            <button class="unlike-btn"><i class="fas fa-arrow-down"></i></button>
+            <button class="reply-btn"><i class="fas fa-reply"></i> Reply</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="comment-form"> <!-- נוספה -->
+        <input type="text" placeholder="כתוב תגובה..."> <!-- נוספה -->
+        <button class="submit-comment-btn">שלח</button> <!-- נוספה -->
+      </div>
+    </div>
+    <!-- סוף post-container -->
+
+    <p id="no-results" style="display: none; color: #888; font-style: italic;">No posts found.</p> <!-- נוספה -->
+  </main>
+
+  <aside class="right-sidebar">
+    <div class="right-footer">
+      <p>Reddit Rules</p>
+      <p>Privacy Policy</p>
+      <p>User Agreement</p>
+      <p>Reddit, Inc. © 2025. All rights reserved.</p>
+    </div>
+  </aside>
+
+  <footer class="footer">
+    <p>Reddit, Inc. © 2025. All rights reserved.</p>
+  </footer>
+
+  <script src="homepage.js"></script> <!-- ודא שזה שם! -->
+</body>
+</html>
