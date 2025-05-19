@@ -1,0 +1,142 @@
+
+
+html, body {
+    background-image: url("https://preview.redd.it/websites-not-showing-up-correctly-v0-3fs6si1ro78d1.png?width=640&crop=smart&auto=webp&s=7b0a217b293ae4b798f9e4740caa50ceb3af9304");
+    background-size: auto 110%; 
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    font-family: "Google Sans", arial, sans-serif;
+}
+
+#navbar{
+    background-color: #ffffff;
+    border: #edebeb 0.4px solid; 
+    height: 60px;
+    font-size: 18px;
+}
+.navbar-logo {
+    height: 30px; 
+    width: auto; 
+    vertical-align: middle;
+    margin-left: 20px; 
+}
+
+#container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    height: 80%; /* Ensure the container takes full height */
+    width: 30%; /* Adjust width to make it compact */
+    margin: 0 auto; /* Center horizontally */
+    padding-top: 30px; 
+    padding-bottom: 30px; 
+    padding-left: 60px; 
+    padding-right: 60px; 
+    background-color: #ffffff; 
+    border-radius: 20px; 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); 
+}
+.card-text{
+    font-size: 14px;
+    color: #565b5f;
+}
+.card-title{
+    font-size: 24px;
+}
+.link-opacity-10-hover{
+    text-decoration: none;
+    
+}
+.link-opacity-10-hover:hover{
+    text-decoration: underline;
+    color: #007bff;
+    
+}
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Ensure consistent width for buttons and input fields */
+.uniform-width {
+    width: 100%; /* Full width of the parent container */
+    max-width: 400px; /* Optional: Set a maximum width */
+    margin: 0 auto; /* Center horizontally */
+}
+
+#login-opt-btn {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    background-color:#ffffff; 
+    color: black;
+    border: 0.3px solid #e0e0e0;
+    border-radius: 50px;
+    padding: 10px 15px;
+    width: 90%; /* Match the width of input fields */
+    max-width: 400px; 
+    text-align: center;
+    position: relative; 
+    
+}
+#login-opt-btn i {
+    margin-right: auto; /* Push the icon to the far right */
+    position: absolute; /* Position the icon independently */
+    left: 15px; /* Adjust spacing from the right edge */
+    font-size: 16px; 
+}
+
+#login-btn {
+    background-color:#f1f1f1; 
+    color: #acacac;
+    width: 90%; 
+    max-width: 400px; 
+    border-radius: 50px; 
+    padding: 10px 15px; 
+    border: none;
+    font-size: 14px;
+    
+}
+
+.custom-input {
+    background-color: #e5ebee; 
+    border: none; 
+    border-radius: 20px; 
+    padding: 15px 20px; 
+    width: 90%; 
+    font-size: 15px; 
+    outline: none; 
+}
+.custom-input::placeholder{
+    color:#687a87;
+}
+
+#Forgot-password-lnk {
+    text-align: left;
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+    
+}
+#card-footer{
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    position: relative;
+    font-size: 12px;
+    color:#6c757d ;
+    margin-top: 20px 0;
+}
+#card-footer::before,
+#card-footer::after {
+    content: ""; 
+    flex: 1; 
+    height: 1.2px;
+    background-color: #d3d3d3; 
+    margin: 0 10px; 
+}
