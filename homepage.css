@@ -1,42 +1,47 @@
 /* roei hamihas id-323919829 ---------- tal braunstein  id-207118365 */
-body {
+body, html {
     margin: 0;
     font-family: Arial, sans-serif;
+    background: white;
+    color: black;
+  }
+  
+  a, button, input {
+    font-family: inherit;
+    font-size: 14px;
+  }
+  
+  .reddit-header, .sidebar, .post, .right-sidebar, .footer {
+    background: white;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 1rem;
   }
   
   .reddit-header {
     display: flex;
     align-items: center;
-    padding: 0.5rem 1rem;
-    background-color: white;
-    border-bottom: 1px solid #ccc;
+    justify-content: space-between;
   }
   
   .reddit-logo {
     font-weight: bold;
-    color: #ff4500;
     font-size: 1.5rem;
-    margin-right: 1rem;
+    color: #ff4500;
     display: flex;
     align-items: center;
     gap: 6px;
   }
   
   .reddit-icon {
-    font-size: 1.8rem;
-    color: #ff4500;
+    font-size: 24px;
   }
   
   .search-bar {
     position: relative;
     display: flex;
     align-items: center;
-    flex-grow: 0;
-    margin: 0 auto;
-    flex-shrink: 0;
     width: 450px;
-    height: 40px;
-    font-size: 30px;
   }
   
   .search-icon {
@@ -44,72 +49,57 @@ body {
     left: 12px;
     color: #888;
     font-size: 14px;
-    pointer-events: none;
   }
   
   .search-bar input {
     width: 100%;
-    padding: 6px 12px;
+    padding: 6px 12px 6px 32px;
     border-radius: 30px;
     border: 1px solid #ccc;
-    height: 20px;
-    padding-left: 32px;
   }
   
-  .header-icons {
+  .header-icons, .post-actions, .comment-actions, .sort-bar {
     display: flex;
+    color: #888;
+    gap: 10px;
     align-items: center;
-    gap: 15px;
-    font-size: 22px;
-    color: #555;
+    font-size: 24px
+    
   }
   
   .sidebar {
     width: 220px;
     height: 100vh;
-    background-color: #f6f7f8;
-    border-right: 1px solid #ccc;
-    padding: 1rem;
     position: fixed;
-    top: 0;
+    top: 60px;
     left: 0;
     z-index: 1000;
-    margin-top: 60px;
+    overflow-y: auto;
   }
   
   .sidebar-menu {
     list-style: none;
     padding: 0;
-    margin: 0;
   }
   
   .sidebar-menu li {
     display: flex;
     align-items: center;
     padding: 10px 5px;
-    font-size: 15px;
-    color: #1a1a1b;
-    cursor: pointer;
     border-radius: 6px;
+    cursor: pointer;
     transition: background 0.2s ease;
   }
   
   .sidebar-menu li:hover {
-    background-color: #e2e4e6;
+    background: #e2e4e6;
   }
   
   .sidebar-menu i {
     margin-right: 10px;
-    font-size: 18px;
     width: 22px;
     text-align: center;
     color: #7c7c7c;
-  }
-  
-  .sidebar hr {
-    margin: 1rem 0;
-    border: none;
-    border-top: 1px solid #ddd;
   }
   
   .main-content {
@@ -117,43 +107,26 @@ body {
     padding: 20px;
   }
   
-  .sort-bar {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .sort-button {
-    background-color: #f6f7f8;
+  .sort-button, .toggle-comments-btn, .theme-toggle {
     border: 1px solid #ccc;
     border-radius: 20px;
     padding: 6px 14px;
-    font-size: 14px;
+    background: #f6f7f8;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  
-  .sort-button:hover {
-    background-color: #e2e4e6;
   }
   
   .post {
-    background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
+    background: #fff;
     padding: 16px;
     margin-bottom: 20px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
   }
   
   .post-meta {
-    color: #7c7c7c;
     font-size: 12px;
-    margin-bottom: 8px;
-    max-width: 500px;
+    color: #7c7c7c;
   }
   
   .post-title {
@@ -163,40 +136,9 @@ body {
   
   .post-image {
     width: 100%;
+    max-width: 1000px;
     border-radius: 8px;
     margin-bottom: 12px;
-    max-width: 1000px;
-  }
-  
-  .post-actions {
-    display: flex;
-    gap: 16px;
-    color: #7c7c7c;
-    font-size: 14px;
-    max-width: 1000px;
-  }
-  
-  .post-actions i {
-    margin-right: 5px;
-  }
-  
-  .footer {
-    margin-left: 220px;
-    padding: 20px;
-    text-align: center;
-    color: #888;
-    font-size: 12px;
-    border-top: 1px solid #ddd;
-  }
-  
-  .right-sidebar {
-    position: fixed;
-    top: 60px;
-    right: 0;
-    width: 600px;
-    height: calc(100vh - 60px);
-    background-color: #ffffff;
-    border-left: 1px solid #ddd;
   }
   
   .right-footer {
@@ -207,11 +149,14 @@ body {
     color: #888;
     line-height: 1.5;
   }
+       
   
-  .comment-actions {
-    margin-top: 8px;
-    display: flex;
-    gap: 10px;
+  .right-sidebar {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 600px;
+    height: calc(100vh - 60px);
   }
   
   .vote-btn, .reply-btn, .like-btn, .unlike-btn {
@@ -219,8 +164,6 @@ body {
     border: none;
     color: #888;
     cursor: pointer;
-    font-size: 14px;
-    padding: 4px 6px;
     transition: color 0.2s;
   }
   
@@ -229,23 +172,119 @@ body {
   }
   
   .comment-form {
-    margin-top: 10px;
     display: flex;
     gap: 10px;
+    margin-top: 12px;
+    width: 100%;
   }
   
   .comment-form input {
     flex: 1;
-    padding: 5px;
+    padding: 6px;
+    max-width: 500px;
   }
   
-  .toggle-comments-btn {
-    background-color: #f6f7f8;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    padding: 6px 14px;
-    font-size: 14px;
+  
+  /* DARK MODE */
+  .dark-mode body,
+  .dark-mode html,
+  .dark-mode .post-container,
+  .dark-mode .main-content {
+    background: #121212 !important;
+    color: #e0e0e0 !important;
+  }
+  
+  .dark-mode .reddit-header,
+  .dark-mode .sidebar,
+  .dark-mode .post,
+  .dark-mode .right-sidebar,
+  .dark-mode .footer,
+  .dark-mode .comment,
+  .dark-mode .sort-button,
+  .dark-mode .comment-form input,
+  .dark-mode .search-bar input,
+  .dark-mode .toggle-comments-btn {
+    background: #1e1e1e !important;
+    border-color: #333 !important;
+    color: #fff !important;
+  }
+  
+  .dark-mode input::placeholder {
+    color: #ccc;
+  }
+  
+  .dark-mode .like-btn,
+  .dark-mode .unlike-btn,
+  .dark-mode .reply-btn,
+  .dark-mode .search-icon {
+    color: #ccc !important;
+  }
+  .reddit-header {
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+    background-color: white;
+  }
+  .post {
+    max-width: 700px;
+    width: 100%;
+    height: 600px; /* גובה אחיד */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  }.post-image {
+    max-width: 700px;
+    width: 100%;
+    height: 600px; /* גובה אחיד */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  }
+  .back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 14px;
+    font-size: 30px;
+    border: none;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #888;
     cursor: pointer;
-    margin-top: 10px;
+    display: none;
+    z-index: 1002;
+  }
+  
+  .back-to-top:hover {
+    background-color: #ffffff;
+  }
+  .typing-status {
+    font-size: 13px;
+    color: #888;
+    font-style: italic;
+  }
+  
+  .typing-indicator {
+    text-align: right;
+    color: #888;
+    font-style: italic;
+    font-size: 13px;
+    margin-bottom: 6px;
+    display: none;
+  }
+  .post-container {
+    margin-bottom: 40px; /* או כל גובה שתבחר */
   }
   
