@@ -120,9 +120,19 @@ html, body {
     padding: 10px 15px; 
     border: none;
     font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease, cursor 0.3s ease;
     
 }
-
+#login-btn.active {
+    background-color: #ff6836;  
+    color: white;
+    cursor: pointer;
+}
+#login-btn.inactive{
+    background-color: #f1f1f1;
+    color: #acacac;
+    cursor: not-allowed;
+}
 .custom-input {
     background-color: #e5ebee; 
     border: 2px solid #e5ebee; /* <-- add 'solid' here */
@@ -133,8 +143,49 @@ html, body {
     outline: none; 
     transition: 150ms ease;
 }
-.custom-input::placeholder{
-    color:#687a87;
+
+.custom-input:hover{
+    background-color: #7591a549; 
+}
+.custom-input:focus{
+    outline: none; 
+    box-shadow: none;
+    background-color: #e5ebee;
+    border-color: #40add4; 
+    
+}
+.floating-label-group {
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+.floating-label-group input {
+  width: 100%;
+  padding: 16px 12px 12px 12px;
+  background-color: #e5ebee;
+  font-size: 15px;
+}
+
+.floating-label-group label {
+  position: absolute;
+  left: 12px;
+  top: 16px;
+  color: #687a87;
+  font-size: 15px;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  background:transparent;
+  padding: 0 4px;
+}
+
+/* When input is focused or has value */
+.floating-label-group input:focus + label,
+.floating-label-group input:not(:placeholder-shown) + label {
+  top: -0.2px;
+  left: 14px;
+  font-size: 12px;
+  color: #687a87;
+  padding: 0.2rem;
 }
 .custom-input:hover{
     background-color: #7591a549; 
@@ -188,6 +239,9 @@ html, body {
 }
 form div.incorrect input{
     border-color: rgb(194, 55, 45);
+}
+form div.correct input{
+    border-color: rgb(62, 194, 45);
 }
 #error-message{
     color: rgb(194, 55, 45);
