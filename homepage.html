@@ -58,11 +58,22 @@
   <main class="main-content">
     <div class="sort-bar">
       <button class="sort-button">Best <i class="fas fa-chevron-down"></i></button>
-      <button class="sort-button"><i class="fas fa-th"></i></button>
+      <button id="post-type-toggle" class="sort-button">
+        <i class="fas fa-table-cells-large"></i>
+      </button>
+      
+      <div id="post-type-menu" class="post-type-dropdown" style="display: none;">
+        <button class="post-type-option" data-type="all">📋 הצג הכל</button> 
+        <button class="post-type-option" data-type="image">📷 פוסט תמונה</button>
+        <button class="post-type-option" data-type="text">📝 פוסט טקסט</button>
+        <button class="post-type-option" data-type="video">🎥 פוסט וידאו</button>
+      </div>
+      
     </div>
 
-    <div class="post-container">    
+    <div class="post-container">   
       <div class="post">
+        <button class="delete-post-btn"><i class="fas fa-trash"></i> Delete</button>    
         <i class="bi bi-person-circle"></i>
         <h6 class="post-meta">r/CatsBeingAdorable • 9 hr. ago</h6>
         <h5 class="post-title">i want a name for my new cat 🐱</h5>
@@ -70,7 +81,15 @@
         <div class="post-actions">
           <button class="like-btn post-like"><i class="fas fa-arrow-up"></i> <span class="like-count">62</span></button>
           <button class="post-action-btn"><i class="fas fa-comment"></i> <span class="comment-counter">3</span></button>
-          <button class="post-action-btn"><i class="fas fa-share"></i> Share</button>
+          <div class="share-dropdown-wrapper">
+            <button class="post-action-btn share-btn"><i class="fas fa-share"></i> Share</button>
+            <div class="share-dropdown" style="display: none;">
+              <button class="share-item"><i class="fas fa-link"></i> Copy link</button>
+              <button class="share-item"><i class="fas fa-retweet"></i> Crosspost</button>
+              <button class="share-item"><i class="fas fa-code"></i> Embed</button>
+            </div>
+          </div>
+          
         </div>
       </div>
 
@@ -114,10 +133,12 @@
           </div>  
     </div>
     </div>
+  
 
     <p id="no-results" style="display: none; color: #888; font-style: italic;">No posts found.</p>
     <div class="post-container">          
         <div class="post">
+          <button class="delete-post-btn"><i class="fas fa-trash"></i> Delete</button>    
           <i class="bi bi-person-circle"></i>
           <h6 class="post-meta">r/AnimalsBeingBros • 1 hr. ago</h6>
           <h5 class="post-title">my dog thinks he's lunch 🌭</h5>
@@ -125,10 +146,20 @@
           <div class="post-actions">
             <button class="like-btn post-like"><i class="fas fa-arrow-up"></i> <span class="like-count">27</span></
                 <button class="post-action-btn"><i class="fas fa-comment"></i> <span class="comment-counter">3</span></button>
-                <button class="post-action-btn"><i class="fas fa-share"></i> Share</button>
+                <div class="share-dropdown-wrapper">
+                  <button class="post-action-btn share-btn"><i class="fas fa-share"></i> Share</button>
+                  <div class="share-dropdown" style="display: none;">
+                    <button class="share-item"><i class="fas fa-link"></i> Copy link</button>
+                    <button class="share-item"><i class="fas fa-retweet"></i> Crosspost</button>
+                    <button class="share-item"><i class="fas fa-code"></i> Embed</button>
+                  </div>
+                </div>
+                
               </div>
             </div>
           
+            
+
             <button class="toggle-comments-btn">הצג תגובות</button>
           
             <div class="comments">
@@ -159,13 +190,13 @@
             </div>
           
             <div class="comment-form">
-                <div class="typing-indicator" style="display: none; text-align: right; color: #888; font-style: italic; font-size: 13px; margin-bottom: 6px;">
-                    Anonymous is typing...
-                  </div>
               <input type="text" placeholder="כתוב תגובה...">
               <button class="submit-comment-btn">שלח</button>
+              <div class="typing-indicator" style="display: none; text-align: right; color: #888; font-style: italic; font-size: 13px; margin-bottom: 6px;">
+                Anonymous is typing...
+              </div>
             </div>
-          </div>                
+          </div>           
   </main>
 
   <aside class="right-sidebar">
