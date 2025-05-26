@@ -287,4 +287,85 @@ body, html {
   .post-container {
     margin-bottom: 40px; /* או כל גובה שתבחר */
   }
+
+  .delete-post-btn {
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.2s;
+  }
+  
+  .delete-post-btn:hover {
+    color: red;
+  }
+  .post-container {
+    margin-bottom: 90px;
+  }
+  .share-dropdown-wrapper {
+    position: relative;
+  }
+  
+  .share-dropdown {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    z-index: 100;
+  }
+  
+  .share-item {
+    padding: 10px 14px;
+    border: none;
+    background: none;
+    text-align: left;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .share-item:hover {
+    background-color: #f2f2f2;
+  }
+
+  .post {
+    position: relative;
+    overflow: visible;  
+    z-index: auto;
+  }
+  .post-type-dropdown {
+    position: absolute;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    top: 45px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    z-index: 9999;
+    width: 170px;
+  }
+  
+  .post-type-option {
+    padding: 10px 12px;
+    background: none;
+    border: none;
+    text-align: right;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .post-type-option:hover {
+    background-color: #f2f2f2;
+  }
   
