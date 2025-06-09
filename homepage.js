@@ -1,4 +1,20 @@
 // roei hamihas id-323919829 ---------- tal braunstein  id-207118365
+function showBurgerPost(button) {
+  const post = document.getElementById('burger-post');
+  const visible = post.style.display === 'block';
+
+  post.style.display = visible ? 'none' : 'block'; // הפעלה וכיבוי
+
+  post.classList.add('fade-in'); // אפקט מעבר
+  setTimeout(() => post.classList.remove('fade-in'), 300);
+
+  button.classList.add('flash'); // אפקט הבזק
+  setTimeout(() => {
+    button.classList.remove('flash');
+  }, 600);
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const postContainers = document.querySelectorAll(".post-container");
 

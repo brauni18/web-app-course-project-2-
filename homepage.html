@@ -134,32 +134,33 @@
     </div>
     </div>
   
+<!-- כפתור הוסף פוסט -->
+<div style="margin-top: 1em;">
+  <button class="add-post-btn" onclick="showBurgerPost(this)">הוסף/הסר פוסט</button>
+</div>
 
-    <p id="no-results" style="display: none; color: #888; font-style: italic;">No posts found.</p>
-    <div class="post-container">          
-        <div class="post">
-          <button class="delete-post-btn"><i class="fas fa-trash"></i> Delete</button>    
-          <i class="bi bi-person-circle"></i>
-          <h6 class="post-meta">r/AnimalsBeingBros • 1 hr. ago</h6>
-          <h5 class="post-title">my dog thinks he's lunch 🌭</h5>
-          <img class="post-image" src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="Hotdog Dog">
-          <div class="post-actions">
-            <button class="like-btn post-like"><i class="fas fa-arrow-up"></i> <span class="like-count">27</span></
-                <button class="post-action-btn"><i class="fas fa-comment"></i> <span class="comment-counter">3</span></button>
-                <div class="share-dropdown-wrapper">
-                  <button class="post-action-btn share-btn"><i class="fas fa-share"></i> Share</button>
-                  <div class="share-dropdown" style="display: none;">
-                    <button class="share-item"><i class="fas fa-link"></i> Copy link</button>
-                    <button class="share-item"><i class="fas fa-retweet"></i> Crosspost</button>
-                    <button class="share-item"><i class="fas fa-code"></i> Embed</button>
-                  </div>
-                </div>
-                
-              </div>
-            </div>
-          
-            
 
+  <!-- פוסט ההמבורגר מוסתר כברירת מחדל -->
+<div id="burger-post" class="post-container" style="display: none;">
+  <div class="post">
+    <button class="delete-post-btn"><i class="fas fa-trash"></i> Delete</button>
+    <i class="bi bi-person-circle"></i>
+    <h6 class="post-meta">r/FoodPorn • עכשיו</h6>
+    <h5 class="post-title">burger dreams do come true 🍔</h5>
+    <img class="post-image" src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="Burger Picture">
+    <div class="post-actions">
+      <button class="like-btn post-like"><i class="fas fa-arrow-up"></i> <span class="like-count">99</span></button>
+      <button class="post-action-btn"><i class="fas fa-comment"></i> <span class="comment-counter">0</span></button>
+      <div class="share-dropdown-wrapper">
+        <button class="post-action-btn share-btn"><i class="fas fa-share"></i> Share</button>
+        <div class="share-dropdown" style="display: none;">
+          <button class="share-item"><i class="fas fa-link"></i> Copy link</button>
+          <button class="share-item"><i class="fas fa-retweet"></i> Crosspost</button>
+          <button class="share-item"><i class="fas fa-code"></i> Embed</button>
+        </div>
+      </div>
+    </div>
+  </div>
             <button class="toggle-comments-btn">הצג תגובות</button>
           
             <div class="comments">
@@ -196,7 +197,8 @@
                 Anonymous is typing...
               </div>
             </div>
-          </div>           
+          </div> 
+        </div>         
   </main>
 
   <aside class="right-sidebar">
